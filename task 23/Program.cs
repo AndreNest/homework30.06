@@ -1,10 +1,16 @@
-﻿// 21
+﻿// задача №23
+Console.WriteLine("Введите число N: ");
+int numb = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("============================================");
+Console.WriteLine("Все числа от 1 до "+ numb + ", возведенные в куб.");
 
-double coub (double a1, double b1, double c1, double a2, double b2, double c2)
+int [] A = new int[numb];
+int i = 1;
+while(i <= numb)
 {
-    double result = 0;
-    result = Math.Sqrt((a1-a2)*(a1-a2)+( b1- b2)*(b1-b2)+(c1-c2)*(c1-c2));
-    return result;
+     A[i-1] = i * i * i;
+     Console.Write(A[i-1]+ " ");
+     i++;
+     
 }
-double sum = coub(3,6,8, 2, 1, -7);
-Console.WriteLine(sum);
+
